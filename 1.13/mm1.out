@@ -1,0 +1,40 @@
+Report for N = 1 
+
+Waiting mean A queue: 29.027173  Waiting mean B queue: 28.956655    Total waiting mean: 29.002788
+
+Report for N = 2 
+
+Waiting mean A queue: 34.139265  Waiting mean B queue: 35.841144    Total waiting mean: 34.658923
+
+Report for N = 3 
+
+Waiting mean A queue: 31.203901  Waiting mean B queue: 24.669057    Total waiting mean: 29.284939
+
+Report for N = 4 
+
+Waiting mean A queue: 33.188318  Waiting mean B queue: 26.666635    Total waiting mean: 30.421543
+
+Report for N = 5 
+
+Waiting mean A queue: 32.191837  Waiting mean B queue: 31.066835    Total waiting mean: 31.778750
+
+Report for N = 6 
+
+Waiting mean A queue: 52.718183  Waiting mean B queue: 41.657722    Total waiting mean: 49.098395
+
+Report for N = 7 
+
+Waiting mean A queue: 49.771924  Waiting mean B queue: 49.190046    Total waiting mean: 49.577965
+
+Report for N = 8 
+
+Waiting mean A queue: 42.003482  Waiting mean B queue: 46.742583    Total waiting mean: 43.387467
+
+Report for N = 9 
+
+Waiting mean A queue: 44.609398  Waiting mean B queue: 50.161435    Total waiting mean: 46.476454
+
+Report for N = 10 
+
+Waiting mean A queue: 74.161550  Waiting mean B queue: 95.454633    Total waiting mean: 79.839705
+

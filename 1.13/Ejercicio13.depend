@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1635740285 source:d:\documents\c\ejercicio13\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"lcgrand.h"
+
+903918616 d:\documents\c\ejercicio13\lcgrand.h
+	"lcgrand.h"
+
+903918794 source:d:\documents\c\ejercicio13\lcgrand.c
+
