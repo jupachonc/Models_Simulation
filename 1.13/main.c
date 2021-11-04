@@ -20,7 +20,7 @@ int bus_status, bus_station, next_event_type, init_N, end_N, current_N, count_qu
 float simulation_time, clock, time_next_event[NUM_EVENTS + 1], time_queue_A[MAX_QUEUE_LIMIT + 1], time_queue_B[MAX_QUEUE_LIMIT + 1],
       sum_waiting_time_A, sum_waiting_time_B, exp_mean_arrival_A, exp_mean_arrival_B;
 
-FILE *infile, *outfile;
+FILE *infile, *outfile, *csv;
 
 void initialize(void);
 void timing(void);
@@ -32,6 +32,8 @@ void report(void);
 float expon(float);
 float standardNormal(void);
 float normal(float, float);
+
+
 main()
 {
     printf("Simulation Started\n\n");
@@ -42,6 +44,7 @@ main()
     /* Open input and output files. */
     infile  = fopen("mm1.in",  "r");
     outfile = fopen("mm1.out", "w");
+    csv = fopen("results.csv", "a");
 
     /* Read input file and save variables */
     fscanf(infile, "%d %d %f", &init_N, &end_N, &simulation_time);
@@ -137,7 +140,7 @@ void timing(void)  /* Timing function. */
 void arrival_A(void)
 {
     /* Count new passenger */
-    count_queue_A += 1;
+    count_queue_A ++;
     /* Save arrival time of passenger */
     time_queue_A[count_queue_A] = clock;
 
@@ -216,6 +219,7 @@ void report(void)
     fprintf(outfile, "Report for N = %d \n\n", current_N);
     fprintf(outfile, "Waiting mean A queue: %f  Waiting mean B queue: %f    Total waiting mean: %f\n\n",
             sum_waiting_time_A/count_passengers_A, sum_waiting_time_B/count_passengers_B, (sum_waiting_time_A + sum_waiting_time_B)/(count_passengers_A + count_passengers_B));
+    fprintf(csv, "%d;%f;%f;%f\n", current_N, sum_waiting_time_A/count_passengers_A, sum_waiting_time_B/count_passengers_B, (sum_waiting_time_A + sum_waiting_time_B)/(count_passengers_A + count_passengers_B));
 }
 
 /*The exponential distribution is used model the amount of time between events in a Poisson process. */
